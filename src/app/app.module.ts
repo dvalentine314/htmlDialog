@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { ModalContentComponent } from './modal-content/modal-content.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ModalContentComponent
   ],
   imports: [
     BrowserModule

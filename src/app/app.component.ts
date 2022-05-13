@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'htmlDialog';
+
+  selectedNumbers:number=0;
+  showDialog:boolean=false;
+  @ViewChild('ModalReference') modalReference!:ElementRef;
+  numbersChanged(){
+
+  }
+
+  toggleDialog(){
+    //this.showDialog = !this.showDialog;
+    if(!this.modalReference.nativeElement.open){
+      this.modalReference.nativeElement.showModal();
+    }else{
+      this.modalReference.nativeElement.close();
+    }
+  }
+
 }

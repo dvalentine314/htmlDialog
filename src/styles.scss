@@ -1,1 +1,18 @@
+@import '~bootstrap/scss/bootstrap';
+
 /* You can add global styles to this file, and also import other style files */
+.eg-modal-header {
+  background-color: #006EB6;
+  color: #ffffff;
+}
+
+dialog{
+  padding:0px;
+  border:none;
+}
+
+dialog::backdrop {
+  /* for dialog-polyfill */
+  /* a transparent shade of gray */
+  background-color: rgba(0, 0, 0, 0.2);
+}
